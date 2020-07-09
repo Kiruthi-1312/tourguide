@@ -1,0 +1,205 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+	box-sizing: border-box
+}
+
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: Sans-serif;
+}
+
+.tablink {
+	background-color: #555;
+	color: white;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+	width: 33.33%;
+}
+
+.tablink:hover {
+	background-color: #777;
+}
+
+.tabcontent {
+	color: black;
+	display: none;
+	padding: 100px 20px;
+	height: 100%;
+}
+
+.responsive {
+	max-width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.main {
+	margin-left: 160px;
+	padding: 0px 10px;
+	align: center;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 30px;
+}
+
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+</style>
+</head>
+<body>
+
+	<button class="tablink"
+		onclick="openPage('Places to visit', this, 'green')" id="defaultOpen">Places
+		to visit</button>
+	<button class="tablink" onclick="openPage('Location', this, 'green')">Location</button>
+	<button class="tablink"
+		onclick="openPage('How to reach', this, 'green')">How to
+		reach</button>
+
+
+
+	<div id="Places to visit" class="tabcontent">
+		<h3 style="text-align: center; color: blue">PLACES TO VISIT IN
+			TAMIL NADU</h3>
+
+		<div class="row">
+			<div class="column">
+				<br />
+				<img
+					src="https://www.travelogyindia.com/blog/wp-content/uploads/2019/01/Rameshwaram-Pamban-Bridge.jpg"
+					class="responsive"> <br />
+				<a href="https://en.wikipedia.org/wiki/Rameswaram">Rameshwaram</a>
+			</div>
+
+			<div class="column">
+				<br />
+				<img
+					src="https://www.tourmyindia.com/hill_stations/images/best-time-yercaud.jpg"
+					style="width: 100%; height: 60%"> <br />
+				<a href="https://en.wikipedia.org/wiki/Yercaud">Yercaud</a>
+			</div>
+
+			<div class="column">
+				<br />
+				<img
+					src="https://image.shutterstock.com/image-photo/landscape-ooty-ootacamund-popular-hill-260nw-1373319851.jpg"
+					style="width: 100%; height: 58%"> <br />
+				<a href="https://en.wikipedia.org/wiki/Ooty">Ooty</a>
+			</div>
+		</div>
+
+
+		<div class="row">
+			<div class="column">
+				<br />
+				<img
+					src="https://img.theculturetrip.com/768x432/wp-content/uploads/2018/08/c1jc83-1.jpg"
+					style="width: 100%"> <br />
+				<a href="https://en.wikipedia.org/wiki/Kanchipuram">Kancheepuram</a>
+			</div>
+
+			<div class="column">
+				<br />
+				<img
+					src="https://religionworld.s3.amazonaws.com/uploads/2017/11/velankanni.jpg"
+					style="width: 100%; height: 60%"> <br />
+				<a href="https://en.wikipedia.org/wiki/Velankanni">Velankanni</a>
+			</div>
+
+			<div class="column">
+				<br />
+				<img
+					src="https://www.thehindu.com/news/cities/Tiruchirapalli/article19707594.ece/ALTERNATES/LANDSCAPE_1200/MA18FALLSCOURTALLAM"
+					style="width: 100%; height: 60%"> <br />
+				<a href="https://en.wikipedia.org/wiki/Courtallam">Kutralam</a>
+			</div>
+
+
+		</div>
+	</div>
+
+
+
+	<div id="Location" class="tabcontent">
+		<h3>Location</h3>
+
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d4008010.8021379746!2d75.97048749484482!3d11.18222725644734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stourist%20map%20tamil%20nadu!5e0!3m2!1sen!2sin!4v1594295453913!5m2!1sen!2sin"
+			width="600" height="450" frameborder="0" style="border: 0;"
+			allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+	</div>
+
+	<div id="How to reach" class="tabcontent">
+
+		<h2>How to Reach- Tamil Nadu</h2>
+		<div class="main">
+			<p>The state of Tamil Nadu offers an enchanting combination of
+				temples, monuments, beaches, hill stations and wild life. The
+				intricately carved temples and monuments sport the architectural
+				splendor of the Indian civilization. Tranquil hill stations and
+				picturesque beaches promise you an ideal holiday.</p>
+
+			<h3>By Air</h3>
+			<p>Tamil Nadu has an International Airport near Chennai, which
+				serves as the most convenient entry point for Tamil Nadu.
+				International airlines from countries like Sri Lanka, Dubai,
+				Germany, Jakarta, Malaysia, England, Maldives, Saudi Arabia, and
+				Singapore operate regular flights to connect Chennai. You can also
+				approach Chennai from any part of the country by most public and
+				private airlines in India.</p>
+
+			<h3>By Train</h3>
+			<p>The main Railway Station in Tamil Nadu is in Chennai. Many
+				important trains connect Chennai to other major Railway Stations in
+				the country.</p>
+			<h3>By Road</h3>
+			<p>An extensive network of roadways covers Tamil Nadu. A number
+				of national highways and state highways crisscross the land. The
+				major cities like Delhi, Kolkata, Mumbai, and Bangalore are linked
+				by road to Chennai and other important cities in the state. Tamil
+				Nadu State Transport Corporation (TNSTC) buses run throughout the
+				state and connect it to the neighbouring cities and states.</p>
+
+		</div>
+	</div>
+
+
+	<script>
+		function openPage(pageName, elmnt, color) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablink");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].style.backgroundColor = "";
+			}
+			document.getElementById(pageName).style.display = "block";
+			elmnt.style.backgroundColor = color;
+		}
+
+		document.getElementById("defaultOpen").click();
+	</script>
+
+
+
+</body>
+</html>

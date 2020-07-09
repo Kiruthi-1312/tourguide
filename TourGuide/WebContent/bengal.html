@@ -1,0 +1,162 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:Sans-serif;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+.tabcontent {
+  color:black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.responsive{
+   max-width:100%;
+   height: auto;
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+  align:center;
+}
+
+.column {
+  float: left;
+  width:33.33%;
+  padding: 30px ;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Places to visit', this, 'green')"id="defaultOpen">Places to visit</button>
+<button class="tablink" onclick="openPage('Location', this, 'green')" >Location</button>
+<button class="tablink" onclick="openPage('How to reach', this, 'green')">How to reach</button>
+
+
+
+<div id="Places to visit" class="tabcontent">
+  <h3 style="text-align:center;color:blue">PLACES TO VISIT IN BENGAL</h3>
+  
+<div class="row">
+<div class="column">
+<br/><img src="https://lh3.googleusercontent.com/proxy/TyHlDK79_AMXsVhU0GGJIQSCxSdhooOqms6Lc_orgLXkxLwYzZwqVFNJ2Wee0xffiaxpGrAXzqxUdFlHEoEiGSlvjjJGs2Ctw-zmr9k4TRqFKwnoFlCJ3leL4uH7KyGtl0YiK9XERcEFcEBciowOblmGSA" style="width:100%">
+<br/><a href="https://en.wikipedia.org/wiki/Sundarbans_National_Park">Sundarbans National Park</a>
+</div>
+
+
+
+<div class="column">
+<br/><img src="https://img.etimg.com/thumb/width-640,height-480,imgsize-435719,resizemode-1,msid-65395372/business-in-darjeeling-seen-picking-up.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Darjeeling">Darjeeling</a>
+</div>
+
+<div class="column">
+<br/><img src="https://static.toiimg.com/photo/62804668.cms" style="width:100%;height:58%">
+<br/><a href="https://en.wikipedia.org/wiki/Howrah_Bridge">Howrah Bridge</a>
+</div>
+</div>
+
+
+<div class="row">
+
+<div class="column">
+<br/><img src="https://cdn1.goibibo.com/t_tg_fs/kolkata-victoria-memorial-148325468512-orijgp.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Victoria_Memorial,_Kolkata">Victoria Memorial</a>
+</div>
+
+
+</div>
+</div>
+
+
+
+<div id="Location" class="tabcontent">
+  <h3>Location</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3722970.1221946515!2d85.60937825442157!3d24.32164367241821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1swest%20bengal%20tourist%20map!5e0!3m2!1sen!2sin!4v1593934883990!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+</div>
+
+<div id="How to reach" class="tabcontent">
+
+  <h2>How to Reach- West Bengal</h2>
+ <div class="main">
+  <p>West Bengal represents a panorama of majestic hills, dense jungle replete in wild lives, undulating green plains, beautiful breaches, historical monuments and a tremendously rich culture.
+<p>
+Strategically located at the eastern part of Indian peninsula, the state has a very smooth communication network. It is often referred to as the gateway of the eastern India.
+</p>
+</p>
+
+  <h3>By Air</h3>
+ <p>The state has an international airport in Kolkata, the state capital and another domestic airport at Bagdogra near Siliguri, in the northern Bengal. These two airports are served by nearly all public and private airlines and linked to major Indian cities like Delhi, Mumbai, Chennai and so on. Most of the destinations in West Bengal are located at convenient distance from Kolkata and Bagdogra</p>
+
+<h3>By Rail</h3>
+
+<p>The state has a very good rail network too. Two railway stations namely: Howrah and Sealdah near Kolkata and New Jalpaiguri, close to Siliguri, are key railway stations in the state. There are numerous other railheads that are served by important trains from all over the country and link major destinations within the state.
+</p>
+
+<h3>By Road</h3>
+<p>
+An extensive road network covers the entire state. A number of National Highways and State Highways crisscross the land. One can also approach the state from neighbouring states, name Bihar, Orissa and Jharkhand. Cross border road transportation is also operational with neighbouring countries like Nepal, Bhutan and Bangladesh.
+</p>
+</div>
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html> 

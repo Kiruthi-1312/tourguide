@@ -1,0 +1,169 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:Sans-serif;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+.tabcontent {
+  color:black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.responsive{
+   max-width:100%;
+   height: auto;
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+  align:center;
+}
+
+.column {
+  float: left;
+  width:33.33%;
+  padding: 30px ;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Places to visit', this, 'green')"id="defaultOpen">Places to visit</button>
+<button class="tablink" onclick="openPage('Location', this, 'green')" >Location</button>
+<button class="tablink" onclick="openPage('How to reach', this, 'green')">How to reach</button>
+
+
+
+<div id="Places to visit" class="tabcontent">
+  <h3 style="text-align:center;color:blue">PLACES TO VISIT IN KARNATAKA</h3>
+  
+<div class="row">
+<div class="column">
+<br/><img src="https://www.explorebees.com/uploads/Mysore%20Palace.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Mysore_Palace">Mysore Palace</a>
+</div>
+
+<div class="column">
+<br/><img src="https://www.oyorooms.com/blog/wp-content/uploads/2019/06/Best-time-to-visit-Jog-Falls-Hero-Image.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Jog_Falls">Jog Falls</a>
+</div>
+
+<div class="column">
+<br/><img src="https://s3.india.com/wp-content/uploads/2018/09/Vitthala-Temple-Hampi.jpg" style="width:100%;height:58%">
+<br/><a href="https://en.wikipedia.org/wiki/Hampi">Hampi</a>
+</div>
+</div>
+
+
+<div class="row">
+<div class="column">
+<br/><img src="https://3.bp.blogspot.com/-pR4-f1WRxhw/VTzQ9FZ1QyI/AAAAAAAAHUQ/xSWRvVLzS-8/s1600/Wodeyar%2BBangalore%2BPalace%2BPixelated%2BMemories%2BKarnataka%2BSahil%2BAhuja%2B%286%29.JPG" style="width:100%">
+<br/><a href="https://en.wikipedia.org/wiki/Bangalore_Palace">Banglore Palace</a>
+</div>
+
+<div class="column">
+<br/><img src="https://i.ytimg.com/vi/oT4Lf807_P0/maxresdefault.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Badami_cave_temples">Badami cave Temples</a>
+</div>
+
+<div class="column">
+<br/><img src="https://c1.hiqcdn.com/customcdn/720x512/destreviewimages/1481620718_rotates_shareiq_615_1481613618.840818.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Mirjan_Fort">Mirjan Fort</a>
+</div>
+
+
+</div>
+</div>
+
+
+
+<div id="Location" class="tabcontent">
+  <h3>Location</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d3967523.0552822324!2d73.76076705691482!3d13.806928164032348!3m2!1i1024!2i768!4f13.1!2m1!1skarnataka%20tourist%20places!5e0!3m2!1sen!2sin!4v1593930822125!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+</div>
+
+<div id="How to reach" class="tabcontent">
+
+  <h2>How to Reach- Karnataka</h2>
+ <div class="main">
+  <p>Karnataka is among some of the most advanced states of India, and has an organised network of roads, railways and airways. The transport facilities have played an important role in the development of the state's tourism.
+</p>
+
+  <h3>By Air</h3>
+ <p>The state of Karnataka has four domestic and two international airports. The most important airport of the state is the Bengaluru International Airport. The state is well connected to the rest of the country and the whole world, through regular flights to and from the airports.</p>
+
+<h3>By Rail</h3>
+
+<p>Karnataka has a vast railway network of 3,089 km of total length. While some parts of the state come under the South Western Zone of the Indian railways, rest of the regions fall under the Southern Railways and the Konkan Railway network. All the major tourist spots of the state can be reached through trains running in the state.
+<p>
+The Karnataka Government has recently introduced The Golden Chariot, a train which connects popular tourist destinations in the state and Goa, an added boon to travellers.
+</p>
+
+
+<h3>By Road</h3>
+<p>
+All the major cities and tourist destinations of Karnataka can be easily approached through the excellent road network. Karnataka is connected by 15 National Highways, along with a wide network of state highways. The state has 3,973 km of national highways and 9,829 km of state highways. The Karnataka State Road Transport Corporation (KSRTC) runs a regular bus service in the entire state.
+</p>
+</div>
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html> 

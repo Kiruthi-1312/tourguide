@@ -1,0 +1,171 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:Sans-serif;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+.tabcontent {
+  color:black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.responsive{
+   max-width:100%;
+   height: auto;
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+  align:center;
+}
+
+.column {
+  float: left;
+  width:33.33%;
+  padding: 30px ;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Places to visit', this, 'green')"id="defaultOpen">Places to visit</button>
+<button class="tablink" onclick="openPage('Location', this, 'green')" >Location</button>
+<button class="tablink" onclick="openPage('How to reach', this, 'green')">How to reach</button>
+
+
+
+<div id="Places to visit" class="tabcontent">
+  <h3 style="text-align:center;color:blue">PLACES TO VISIT IN PUNJAB</h3>
+  
+<div class="row">
+<div class="column">
+<br/><img src="https://static.toiimg.com/photo/65022743.cms" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Golden_Temple">Golden Temple</a>-Amristar
+</div>
+<div class="column">
+<br/><img src="https://im.whatshot.in/img/2019/Dec/rose-garden-1575289885.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Zakir_Hussain_Rose_Garden">Zakir Hussain Rose Garden</a>
+</div>
+<div class="column">
+<br/><img src="https://images.tribuneindia.com/cms/gall_content/2018/8/2018_8$largeimg15_Wednesday_2018_012714692.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Bhakra_Dam">Bhakra Nangal Dam</a>
+</div>
+</div>
+
+
+<div class="row">
+<div class="column">
+<br/><img src="https://miro.medium.com/max/3000/0*2gW55h-McP5knss7.jpg" style="width:100%">
+<br/><a href="https://en.wikipedia.org/wiki/Lahore_Fort">Lahore Fort</a>
+</div>
+<div class="column">
+<br/><img src="https://d2c7ipcroan06u.cloudfront.net/wp-content/uploads/2018/12/Panorama_of_Jallianwala_Bagh-e1550674910748-696x392.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Jallianwala_Bagh">JallianWala Bagh</a>
+</div>
+
+<div class="column">
+<br/><img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201504/punjab_650_040615121509.jpg" style="width:100%">
+<br/><a href="https://en.wikipedia.org/wiki/Punjab_Cricket_Association_IS_Bindra_Stadium">Punjab Cricket Association Stadium</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div id="Location" class="tabcontent">
+  <h3>Location</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1752442.9830719244!2d74.68154701521168!3d30.921885203553828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1spunjab%20tourist%20places!5e0!3m2!1sen!2sin!4v1593864218778!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		 
+</div>
+
+
+<div id="How to reach" class="tabcontent">
+  <h3>How to Reach-Punjab</h3>
+ <div class="main">
+  <p>Punjab is a state in the northwestern part of India. It's the land of the five rivers and one of the most important Sikh pilgrimage destinations. Major cities of Punjab include Amritsar, Jalandhar, Ludhiana, Patiala, Bathinda, etc. Apart from these cities there are many tourist attraction places in the state. The entire state of Punjab is so inviting, that you can hardly ignore it.</p>
+
+<h3>By Air</h3>
+
+The state has six airports. Out of these six airports the main commercial airports are:<br/>
+<p>Sri Guru Ram Dass Jee International Airport in Amritsar</p>
+<p>Sahnewal Airport in Ludhiana</p>
+<p>Pathankot Airport in Pathankot</p>
+Almost all important airlines like Spicejet, Air India, Jet Airways and JetKonnect operate flights to these airports connecting them to major Indian cities.
+
+<h3>By Rail</h3>
+
+<p>The state also boasts of a good rail network. Almost all cities of the state are linked together with railways. Main Railway Stations in the state are: Chandigarh, Ludhiana, Ferozepur, Jalandhar, Amritsar and Bhatinda.</p>
+
+<h3>By Road</h3>
+<p>
+Punjab has an extensive road network which links the state directly to most of the significant places in northern and eastern India. National Highways 1 (Grand Trunk Road or G.T. Road), 15, 19, 20, 21, 71, 54 and 1A and numerous of state highways literally crisscross the state making road travel an easy affair. The National Highways in the state are ranked among the best in India with good road infrastructure.
+
+</p>
+</div>
+</div>
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html> 

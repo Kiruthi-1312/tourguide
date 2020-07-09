@@ -1,0 +1,166 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:Sans-serif;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+.tabcontent {
+  color:black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.responsive{
+   max-width:100%;
+   height: auto;
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+  align:center;
+}
+
+.column {
+  float: left;
+  width:33.33%;
+  padding: 30px ;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Places to visit', this, 'green')"id="defaultOpen">Places to visit</button>
+<button class="tablink" onclick="openPage('Location', this, 'green')" >Location</button>
+<button class="tablink" onclick="openPage('How to reach', this, 'green')">How to reach</button>
+
+
+
+<div id="Places to visit" class="tabcontent">
+  <h3 style="text-align:center;color:blue">PLACES TO VISIT IN GOA</h3>
+  
+<div class="row">
+<div class="column">
+<br/><img src="https://images.thrillophilia.com/image/upload/s--kFbTh1TZ--/c_fill,f_auto,fl_strip_profile,h_600,q_auto,w_975/v1/images/photos/000/032/674/original/DD_6.jpg.jpg?1458195547" style="width:100%">
+<br/><a href="https://en.wikipedia.org/wiki/Dudhsagar_Falls">Dudhsagar Falls</a>
+</div>
+
+
+
+<div class="column">
+<br/><img src="https://static.india.com/wp-content/uploads/2014/09/Fort-Aguada.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Fort_Aguada">Fort Aguada</a>
+</div>
+
+<div class="column">
+<br/><img src="https://q-xx.bstatic.com/xdata/images/hotel/840x460/222997385.jpg?k=2d6b10ce99ec0c6d3759087f48603399f824ceb69559115139bbbd03b3769902&o=" style="width:100%;height:58%">
+<br/><a href="https://en.wikipedia.org/wiki/Baga,_Goa">Baga Beach</a>
+</div>
+</div>
+
+
+<div class="row">
+
+<div class="column">
+<br/><img src="https://osborneresortgoa.in/near-calangute-beach/images/beach-in-goa.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Calangute">Calangute</a>
+</div>
+
+<div class="column">
+<br/><img src="https://img.itinari.com/pages/images/original/1c2b2e18-ea10-4b99-8607-3a21a77a0b36-2048px-old_goa-basilica_of_bom_jesus.jpg?ch=DPR&dpr=1&w=1600&s=d9134cd6b98695460df5c9af63732696" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Basilica_of_Bom_Jesus">Basilica of Bom Jesus</a>
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+<div id="Location" class="tabcontent">
+  <h3>Location</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d123036.40605220194!2d73.82701793468591!3d15.49047216526414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgoa%20tourist%20places!5e0!3m2!1sen!2sin!4v1593933020999!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+
+<div id="How to reach" class="tabcontent">
+
+  <h2>How to Reach- Goa</h2>
+ <div class="main">
+  <p>Goa is one of the most important destinations in India. It is the smallest state in India by area, but is famous for its beaches, churches and architecture. Goa is visited by a huge number of international as well as domestic tourists every year. Goa can be reached conveniently from any part of the country and is well connected by air, rail and road network.
+
+</p>
+
+  <h3>By Air</h3>
+ <p>The Goa International Airport which is also known as Dabolim Airport caters to the entire state of Goa. The airport is located at Dabolim and is around 30 km away from Panjim, the capital city. The airport caters to domestic flights from major cities in India and also caters to international flights. Pre-paid taxis and buses can be easily availed from the airport.</p>
+
+<h3>By Rail</h3>
+
+<p>The state of Goa has two rail lines; one is operated the South Western Railway and the other is operated by the Konkan Railway. The main railway station is Madgaon station in Margao. There are other railway stations in the state like Pernem, Thivim, Karmali and Canacona which are also well connected by trains.
+</p>
+
+<h3>By Road</h3>
+<p>
+Goa is well linked with National Highway Numbers 66, 4A, 366, 566 and 768. Goa has a total of 224 km of national highways, 232 km of state highway and 815 km of district highway.
+</p>
+</div>
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html> 

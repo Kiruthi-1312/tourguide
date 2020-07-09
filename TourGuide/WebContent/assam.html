@@ -1,0 +1,142 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:Sans-serif;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+.tabcontent {
+  color:black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.responsive{
+   max-width:100%;
+   height: auto;
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+  align:center;
+}
+
+.column {
+  float: left;
+  width:33.33%;
+  padding: 30px ;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Places to visit', this, 'green')"id="defaultOpen">Places to visit</button>
+<button class="tablink" onclick="openPage('Location', this, 'green')" >Location</button>
+<button class="tablink" onclick="openPage('How to reach', this, 'green')">How to reach</button>
+
+
+
+<div id="Places to visit" class="tabcontent">
+  <h3 style="text-align:center;color:blue">PLACES TO VISIT IN ASSAM</h3>
+  
+<div class="row">
+<div class="column">
+<br/><img src="https://imgcld.yatra.com/ytimages/image/upload/t_yt_blog_c_fill_q_auto:good_f_auto_w_800_h_500/v1553857212/Kaziranga%20National%20Park%20in%20Assam_1553856939.jpg" style="width:100%">
+<br/><a href="https://en.wikipedia.org/wiki/Kaziranga_National_Park">Kaziranga National Park</a>
+</div>
+
+
+
+<div class="column">
+<br/><img src="https://nenow.in/wp-content/uploads/2018/02/manas-national-park-1200x675.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Manas_National_Park">Manas National Park</a>
+</div>
+
+<div class="column">
+<br/><img src="https://i1.wp.com/northeastvacation.in/wp-content/uploads/2019/09/cnd1.jpg?fit=910%2C569&ssl=1" style="width:100%;height:58%">
+<br/><a href="https://en.wikipedia.org/wiki/Chandubi_Lake">Chandubi Lake</a>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+
+
+<div id="Location" class="tabcontent">
+  <h3>Location</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3686822.8915629876!2d91.45678296408467!3d25.703536635770583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sassam%20tourist%20map!5e0!3m2!1sen!2sin!4v1593935825308!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+</div>
+
+<div id="How to reach" class="tabcontent">
+
+  <h2>How to Reach- Assam</h2>
+ <div class="main">
+  <p><ul><li>The bus service in the state as well as in the adjoining states is managed by Assam State Transport Corporation (ASTC).</li><br/> <li>Started for the residents of the state, there were initially around four buses that ran between Nagaon and Guwahati. Eventually, the network improved and ASTC had better connectivity.</li><br/>
+<li> North east's only international airport is Lokpriya Gopinath Bordoloi International Airport, formerly called as Borjhar Airport in Guwahati. Currently, only seven airlines are operating.</li><br/>
+<li>One can get nonstop flights from the airport to 12 cities. On an average, a minimum of 14 international and 315 domestic flights depart every week from the airport.</li><br/>
+<li> Some of the major airports of Assam are Lokpriya Gopinath Bordoloi International Airport (Guwahati), Mohanbari Airport (Dibrugarh), Lilabari Airport (Lakhimpur), Salonibari Airport (Tezpur), Rowriah Airport (Jorhat), Kumbhirgram Airport (Silchar).</li>
+</ul></p>
+</div>
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html> 

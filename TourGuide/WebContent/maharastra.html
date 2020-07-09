@@ -1,0 +1,153 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:Sans-serif;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+.tabcontent {
+  color:black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.responsive{
+   max-width:100%;
+   height: auto;
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+  align:center;
+}
+
+.column {
+  float: left;
+  width:33.33%;
+  padding: 30px ;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Places to visit', this, 'green')"id="defaultOpen">Places to visit</button>
+<button class="tablink" onclick="openPage('Location', this, 'green')" >Location</button>
+<button class="tablink" onclick="openPage('How to reach', this, 'green')">How to reach</button>
+
+
+
+<div id="Places to visit" class="tabcontent">
+  <h3 style="text-align:center;color:blue">PLACES TO VISIT IN MAHARASTRA</h3>
+  
+<div class="row">
+<div class="column">
+<br/><img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/05/Gateway-Of-India_600-1-1280x720.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Gateway_of_India">Gateway of India</a>
+</div>
+
+<div class="column">
+<br/><img src="https://www.onacheaptrip.com/wp-content/uploads/Kailasa-Temple-at-Ellora-Caves-Aurangabad.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Ajanta_Caves">Ajanta Caves</a>
+</div>
+
+<div class="column">
+<br/><img src="https://img.theculturetrip.com/wp-content/uploads/2017/03/ashwin-kumar-flickr.jpg" style="width:100%;height:58%">
+<br/><a href="https://en.wikipedia.org/wiki/Elephanta_Caves">Elephanta Caves</a>
+</div>
+</div>
+
+
+
+
+
+</div>
+</div>
+
+
+
+<div id="Location" class="tabcontent">
+  <h3>Location</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3873776.3832887006!2d73.4733830219326!3d17.970055604085527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smaharastra%20tourist%20map!5e0!3m2!1sen!2sin!4v1593938418068!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+</div>
+
+<div id="How to reach" class="tabcontent">
+
+  <h2>How to Reach- Maharastra</h2>
+ <div class="main">
+  <p>The state of Maharashtra is located in the western part of India and is an important industrialized state. The state also has many popular tourist attractions and a well-developed network of transportation to facilitate the growth of Maharashtra tourism. 
+</p>
+
+  <h3>By Air</h3>
+ <p>The state has two airports - one international (Chattarpati Shivaji International Airport) and another domestic (Santa Cruz Domestic Airport) - in its capital city Mumbai. All public and private airlines, like: Air India, Indian Airlines, Jet Airways, Air Sahara, Kingfisher Airlines, Spice Jet, Air Deccan, operate regularly to and from Mumbai.
+</p>
+
+<h3>By Train</h3>
+
+<p>Mumbai is the state's most important Railway Station. A large number of important trains link the city to other important cities and states of India. There are also major Railway Stations in or close by the tourist destinations.
+</p>
+
+<h3>By Road</h3>
+<p>
+National Highway 17 and the National Highway 6 connect the state of Maharashtra with the rest of India. The state enjoys exceptionally good road network. Besides, a number of other National Highways and State Highways crisscross the state making it convenient to approach any city of Maharashtra from any part of the country. MSRTC (Maharashtra State Road Transport Corporation) runs several buses to and from the city to several other cities and states of the country.
+</p>
+</div>
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html> 

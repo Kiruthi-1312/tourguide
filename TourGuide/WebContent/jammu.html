@@ -1,0 +1,164 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:Sans-serif;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+.tabcontent {
+  color:black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.responsive{
+   max-width:100%;
+   height: auto;
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+  align:center;
+}
+
+.column {
+  float: left;
+  width:33.33%;
+  padding: 30px ;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Places to visit', this, 'green')"id="defaultOpen">Places to visit</button>
+<button class="tablink" onclick="openPage('Location', this, 'green')" >Location</button>
+<button class="tablink" onclick="openPage('How to reach', this, 'green')">How to reach</button>
+
+
+
+<div id="Places to visit" class="tabcontent">
+  <h3 style="text-align:center;color:blue">PLACES TO VISIT IN JAMMU AND KASHMIR</h3>
+  
+<div class="row">
+<div class="column">
+<br/><img src="https://www.holidify.com/images/bgImages/KHILANMARG.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Khilanmarg">Khilanmarg</a>
+</div>
+
+<div class="column">
+<br/><img src="https://www.makemytrip.com/travel-guide/media/dg_image/srinagar/Sinthan-Top-Srinagar.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Sinthan_top">Sinthan Top</a>
+</div>
+
+<div class="column">
+<br/><img src="https://www.adotrip.com/public/images/areas/master_images/5d4952fe786e3-Dachigam_Attractions.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Dachigam_National_Park">Dachigam National Park </a>
+</div>
+</div>
+
+
+<div class="row">
+<div class="column">
+<br/><img src="https://www.tourmyindia.com/states/jammu-kashmir/image/betaab-valley-pahalgam2.jpg" style="width:100%">
+<br/><a href="https://en.wikipedia.org/wiki/Betaab_Valley">Beetab Vaaley</a>
+</div>
+
+<div class="column">
+<br/><img src="https://www.hotelierindia.com/public/styles/full_img/public/images/2019/12/25/Strinks-1.jpg?itok=D8j7UN5c" style="width:100%">
+<br/><a href="https://en.wikipedia.org/wiki/Patnitop">Patnitop</a>
+</div>
+
+
+</div>
+</div>
+
+
+
+<div id="Location" class="tabcontent">
+  <h3>Location</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3402289.5389453825!2d73.72884434714388!3d33.61702061862798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sjammu%20and%20kashmir%20tourism%20places!5e0!3m2!1sen!2sin!4v1593916492899!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		 
+</div>
+
+
+<div id="How to reach" class="tabcontent">
+  <h2>How to Reach- Jammu and Kashmir</h2>
+ <div class="main">
+  <p>The state of Jammu and Kashmir is located in the extreme north of India. It makes for one of the most visited states in the country and about four million Indian tourists visit the state every year. Presence of the sacred Vaishno Devi Temple in the state is the factor driving most of the people to the state. The political turmoil in the state doesn't prevent the tourists from making their way to one of the most beautiful states in the country.</p>
+
+<h3>By Air</h3>
+The state has four airports, namely:
+<ul><li>Jammu Airport (Domestic)</li>
+<li>Kargil Airport (Defense)</li>
+<li>Kushok Bakula Rimpochee Airport, Leh (Domestic)</li>
+<li>Srinagar Airport (International).</li></ul>
+Major airlines like Indian Airlines, Jet Airways operate regular flights to these airports.
+
+<h3>By Rail</h3>
+
+<p>The most important railway station in the state of Jammu and Kashmir is the Jammu Tawi Station which receives trains from all the major Indian cities. Following are some of the trains that one can take to Jammu and Kashmir from major cities in India.</p>
+
+<h3>By Road</h3>
+<p>
+The state has a good road network connecting important neighbourhood states and cities like Delhi, Amritsar, Ambala, Chandigarh, Ludhiana, Jalandhar, Pathankot, Shimla and Manali. National Highway 1A is the national highway connecting various cities of Jammu to each other and to the rest of India. One can also take JKSRTC (Jammu Kashmir State Road Transport Corporation) buses to travel within the state and the nearby states.
+</p>
+</div>
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html> 

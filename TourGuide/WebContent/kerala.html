@@ -1,0 +1,166 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:Sans-serif;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+.tabcontent {
+  color:black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.responsive{
+   max-width:100%;
+   height: auto;
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+  align:center;
+}
+
+.column {
+  float: left;
+  width:33.33%;
+  padding: 30px ;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Places to visit', this, 'green')"id="defaultOpen">Places to visit</button>
+<button class="tablink" onclick="openPage('Location', this, 'green')" >Location</button>
+<button class="tablink" onclick="openPage('How to reach', this, 'green')">How to reach</button>
+
+
+
+<div id="Places to visit" class="tabcontent">
+  <h3 style="text-align:center;color:blue">PLACES TO VISIT IN KERALA</h3>
+  
+<div class="row">
+<div class="column">
+<br/><img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/19/ba.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Munnar">Munnar</a>
+</div>
+
+<div class="column">
+<br/><img src="https://www.tourindiawithdriver.com/UPLOAD/1688_marari-beach3.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Marari_Beach">Marari Beach</a>
+</div>
+
+<div class="column">
+<br/><img src="https://wayanadtourpackages.com/wp-content/uploads/2019/10/edakkal-caves-wyanad.jpg" style="width:100%;height:58%">
+<br/><a href="https://en.wikipedia.org/wiki/Edakkal_Caves">Edakkal caves</a>
+</div>
+</div>
+
+
+<div class="row">
+<div class="column">
+<br/><img src="https://www.trawell.in/admin/images/upload/049130530Valara_Falls_Main.jpg" style="width:100%">
+<br/><a href="https://en.wikipedia.org/wiki/Valara">Valara waterfalls</a>
+</div>
+
+<div class="column">
+<br/><img src="https://k6u8v6y8.stackpathcdn.com/blog/wp-content/uploads/2015/10/Best-Places-to-visit-in-Palakkad-Kerala.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Palakkad">Palakkad</a>
+</div>
+
+<div class="column">
+<br/><img src="https://www.indianpanorama.in/blog/wp-content/uploads/2018/11/Kadalundi-Bird-Sanctuary.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Kadalundi_Bird_Sanctuary">Kadalundi Bird Sanctuary</a>
+</div>
+
+
+</div>
+</div>
+
+
+
+<div id="Location" class="tabcontent">
+  <h3>Location</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2005762.7475662297!2d75.01355574805811!3d10.925146141170929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1skerala%20tourist%20places!5e0!3m2!1sen!2sin!4v1593923295248!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+		 
+</div>
+
+
+<div id="How to reach" class="tabcontent">
+  <h2>How to Reach- Kerala</h2>
+ <div class="main">
+  <p>A modern and progressive state with a cosmopolitan look, Kerala is accessible quite easily. Well-connected by all major systems of transport, the place is now one of the most sought-after travel destinations in the world. Cochin is the main sea-port opening out into the Arabian Sea. Travelling to Kerala is a wholesome, educative and enriching, rejuvenating and fulfilling experience.
+</p>
+
+  <h3>By Air</h3>
+ <p>There are three airports in the state, located at Thiruvnanthapuram, Kochi and Kozhikode, two of which are International Airports. The Karipur Airport, Kozhikode plays host to domestic airlines, while the Thiruvnanthapuram International Airport and the Cochin Airport, Nedumbassery operate both domestic and international flights.</p>
+
+<h3>By Rail</h3>
+
+<p>There are 200 railway stations in Kerala, connecting places both within and outside Kerala. One can avail super-fast and express trains to reach one's chosen destination. The train services link the state to all the important cities of India including the four metropolitan cities namely, New Delhi, Mumbai, Kolkata and Chennai.
+</p>
+
+<h3>By Road</h3>
+<p>
+A very strong commutation network makes Kerala easily accessible from all parts of the country. Kerala is directly connected by road to both Karnataka and Tamil Nadu. National Highway no. 47, 17, 49, and an extensive system of metalled roads connect Kerala to the rest of the country. Buses, tourist taxis, and autos are the main modes of road transport here.
+</p>
+</div>
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html> 

@@ -1,0 +1,117 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+    <title>Login into your account</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+     .navbar{
+        background-color:#0080ff;
+       }
+    .navbar-brand{
+       color:#f2f2f2 ;
+       font-size:20px;
+       font-weight:bold;
+      }
+
+    body, html {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  
+  background-image: url("");
+  min-height: 380px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  right: 500px;
+  margin: 20px;
+  max-width: 300px;
+  height:100%;
+  padding: 16px;
+  background-color:#f2f2f2;
+}
+
+  input[type=email], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: white;
+}
+
+input[type=email]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  opacity: 1;
+}  
+ h2{    text-align:center;
+          color:#000000;
+         }
+
+   </style>
+
+
+ </head>
+
+
+<body>
+    <nav class="navbar navbar-default>
+    
+    <div class= "navbar-header">
+      <a class="navbar-brand" href="Homepage.html">Tour Guide Portal</a>
+    
+      <ul class="nav navbar-nav navbar-right">
+         <li><a href="login.html" class="navbar-brand"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+         <li><a href="register.html" class="navbar-brand"><span class="glyphicon glyphicon-user"></span> Sign-up</a></li>
+
+       </ul>
+       </nav>
+ <div class="bg-img">
+           <h2>Login Form</h2>
+<br/>
+<br/>   
+  <form method="post" action="Login" class="container"> 
+          
+    <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter your email-id" name="email" required>
+    <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="password" required>
+        
+    <button type="submit" class="btn">Login </button><br/>
+    <br/>
+    <br/><p style="text-align:center">New user?  <a href="register.html"> Click here</a></p>
+  </div>
+
+   </form>
+
+</div>
+
+		
+</body>
+ </html> 

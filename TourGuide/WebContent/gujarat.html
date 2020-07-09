@@ -1,0 +1,166 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family:Sans-serif;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 33.33%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+.tabcontent {
+  color:black;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+.responsive{
+   max-width:100%;
+   height: auto;
+   margin-left:auto;
+   margin-right:auto;
+   display:block;
+}
+
+
+.main {
+  margin-left: 160px; 
+  padding: 0px 10px;
+  align:center;
+}
+
+.column {
+  float: left;
+  width:33.33%;
+  padding: 30px ;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Places to visit', this, 'green')"id="defaultOpen">Places to visit</button>
+<button class="tablink" onclick="openPage('Location', this, 'green')" >Location</button>
+<button class="tablink" onclick="openPage('How to reach', this, 'green')">How to reach</button>
+
+
+
+<div id="Places to visit" class="tabcontent">
+  <h3 style="text-align:center;color:blue">PLACES TO VISIT IN GUJARAT</h3>
+  
+<div class="row">
+<div class="column">
+<br/><img src="https://www.swantour.com/blogs/wp-content/uploads/2018/12/Gir-National-Park-Safaris.jpg" class="responsive">
+<br/><a href="https://en.wikipedia.org/wiki/Gir_National_Park">Gir National park</a>
+</div>
+
+<div class="column">
+<br/><img src="https://www.thestatesman.com/wp-content/uploads/2018/10/Statue-of-Unity-Gujarat.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Statue_of_Unity">Statue of Unity</a>
+</div>
+
+<div class="column">
+<br/><img src="https://ahmedabadtourism.in/images/places-to-visit/headers/sabarmati-ashram-ahmedabad-entry-fee-timings-holidays-reviews-header.jpg" style="width:100%;height:58%">
+<br/><a href="https://en.wikipedia.org/wiki/Sabarmati_Ashram">Sabarmathi Ashram</a>
+</div>
+</div>
+
+
+<div class="row">
+<div class="column">
+<br/><img src="https://www.trawell.in/admin/images/upload/151126954Kutch_Museum.jpg" style="width:100%">
+<br/><a href="https://en.wikipedia.org/wiki/Kutch_Museum">Kutch Museum</a>
+</div>
+
+<div class="column">
+<br/><img src="https://www.gujarattourism.com/file-manager/photo-gallery/mandvi_ttd_vijayvilaspalace.JPG" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Vijaya_Vilas_Palace">Vijaya Vilas Palace</a>
+</div>
+
+<div class="column">
+<br/><img src="https://www.storypick.com/wp-content/uploads/2016/04/Dandi-beach.jpg" style="width:100%;height:60%">
+<br/><a href="https://en.wikipedia.org/wiki/Dandi_Beach">Dandi Beach</a>
+</div>
+
+
+</div>
+</div>
+
+
+
+<div id="Location" class="tabcontent">
+  <h3>Location</h3>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3787456.785853363!2d71.62236005835084!3d21.991646468595565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sgujarat%20tourist%20map!5e0!3m2!1sen!2sin!4v1593937587545!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+</div>
+
+<div id="How to reach" class="tabcontent">
+
+  <h2>How to Reach- Tamil Nadu</h2>
+ <div class="main">
+  <p>On the western coast of India, the state of Gujarat is the "Jewel of the West" in India.Gujarat enjoys a more or less moderate climate throughout the year. However, some parts of the state like the Kutch region witness dry and extreme climate. The best time to visit the state is between the months of October and March.
+</p>
+
+  <h3>By Air</h3>
+ <p>Apart from an international airport at Ahmedabad, Gujarat has 10 domestic airports. Most of the domestic airlines connect it to rest of India operating out of Ahmedabad.</p>
+
+<h3>By Train</h3>
+
+<p>Gujarat has a good railway network. It is well connected, not only internally, but also to other places in India.
+</p>
+
+<h3>By Road</h3>
+<p>
+Gujarat has a better road network than most of the other Indian states. The total length of the road in the state is 68,900 kilometer out of which 1,572 kilometer belong to National Highway. This makes Gujarat easily accessible. From most of the larger cities, regular buses are operated by Gujarat State Transport Corporation and private operators to all the major destinations of the state.
+</p>
+</div>
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+document.getElementById("defaultOpen").click();
+</script>
+
+
+
+</body>
+</html> 
